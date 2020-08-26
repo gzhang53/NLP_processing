@@ -1,22 +1,22 @@
 # NLP_processing
 
-Setting up the API
+### Setting up the API
 The Aylien API is perhaps different than what you've used before. It has you install a node module to run certain commands through, it will simplify the requests we need to make from our node/express backend.
 
-Step 1: Signup for an API key
+### Step 1: Signup for an API key
 UPDATE - Since Aylien API is no longer valid for this project, I went with the meaningcloud.com API.
 
-Step 2: Install the SDK
+### Step 2: Install the SDK
 Next you'll need to get the SDK. SDK stands for Software Development Kit, and SDKs are usually a program that brings together various tools to help you work with a specific technology. SDKs will be available for all the major languages and platforms, for instance the Aylien SDK brings together a bunch of tools and functions that will make it possible to interface with their API from our server and is available for Node, Python, PHP, Go, Ruby and many others. We are going to use the Node one, the page is available here. You get 1000 free requests per day.
 
-Step 3: Require the SDK package
+### Step 3: Require the SDK package
 Install the SDK in your project and then we'll be ready to set up your server/index.js file.
 
 Your server index.js file must have these things:
 
- Require the Aylien npm package
-var aylien = require("aylien_textapi");
-Step 4: Environment Variables
+Require the Aylien npm package
+`var aylien = require("aylien_textapi");`
+### Step 4: Environment Variables
 Next we need to declare our API keys, which will look something like this:
 
 // set aylien API credentias
@@ -47,7 +47,7 @@ var textapi = new aylien({
   application_id: process.env.API_ID,
   application_key: process.env.API_KEY
 });
-Step 5: Using the API
+### Step 5: Using the API
 We're ready to go! The API has a lot of different endpoints you can take a look at here. And you can see how using the SDK simplifies the requests we need to make.
 
 I won't provide further examples here, as it's up to you to create the various requests and make sure your server is set up appropriately.
